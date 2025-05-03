@@ -104,28 +104,35 @@ CREATE TABLE Table_Name (
 ```
 
 **Question 1**
---
--- Paste Question 1 here
+![image](https://github.com/user-attachments/assets/3fe83a1a-9889-4688-82ee-6c8f85d7944b)
 
-```sql
--- Paste your SQL code below for Question 1
+
+```
+Create table Locations(
+LocationID INTEGER,
+LocationName TEXT,
+Address TEXT);
 ```
 
 **Output:**
+![image](https://github.com/user-attachments/assets/e65a1e32-affa-418c-9315-c79b79ad5704)
 
-![Output1](output.png)
+
 
 **Question 2**
----
--- Paste Question 2 here
+![image](https://github.com/user-attachments/assets/72849a5e-029c-4112-8f8d-40ace39a1aea)
 
-```sql
--- Paste your SQL code below for Question 2
+
+```
+alter table Student_details add column  ParentsNumber number;
+alter table Student_details add column  Adhar_Number number;
 ```
 
 **Output:**
 
-![Output2](output.png)
+![image](https://github.com/user-attachments/assets/b52a377f-5c94-49d2-94ed-6815a37a67ff)
+
+
 
 **Question 3**
 ---
@@ -152,16 +159,21 @@ CREATE TABLE Table_Name (
 ![Output4](output.png)
 
 **Question 5**
----
--- Paste Question 5 here
+!![image](https://github.com/user-attachments/assets/88581c55-7b8c-4c2d-b19c-7a949373be8d)
 
-```sql
--- Paste your SQL code below for Question 5
+
 ```
-
+create table Orders(
+OrderID INTEGER primary key,
+OrderDate date not null,
+CustomerID INTEGER,
+foreign key(CustomerID)references Customers(CustomerID)
+);
+```
 **Output:**
 
-![Output5](output.png)
+![image](https://github.com/user-attachments/assets/64d73118-9962-474f-bf55-c6536b17f3d2)
+
 
 **Question 6**
 ---
@@ -176,16 +188,23 @@ CREATE TABLE Table_Name (
 ![Output6](output.png)
 
 **Question 7**
----
--- Paste Question 7 here
+![image](https://github.com/user-attachments/assets/11e1c767-4946-483d-a456-67eaae169bcb)
 
-```sql
--- Paste your SQL code below for Question 7
+```
+create table Products(
+ProductID INTEGER primary key,
+ProductName TEXT unique not NULL,
+Price REAL,
+StockQuantity INTEGER,
+check(Price>0),
+check(StockQuantity>=0)
+);
 ```
 
 **Output:**
 
-![Output7](output.png)
+![image](https://github.com/user-attachments/assets/ac82452b-8bd9-4105-b45d-c056acc403a8)
+
 
 **Question 8**
 ---
@@ -200,28 +219,29 @@ CREATE TABLE Table_Name (
 ![Output8](output.png)
 
 **Question 9**
----
--- Paste Question 9 here
+![image](https://github.com/user-attachments/assets/7d6938b8-d8ad-431d-950f-09f30a41d700)
 
-```sql
--- Paste your SQL code below for Question 9
+]```
+create table Shipments(
+ShipmentID INTEGER  primary key,
+ShipmentDate  DATE,
+SupplierID INTEGER ,
+OrderID INTEGER,
+foreign key(SupplierID) References Suppliers(SupplierID),
+foreign key(OrderID) References Orders(OrderID));
 ```
 
 **Output:**
 
-![Output9](output.png)
+![image](https://github.com/user-attachments/assets/88205a4b-e1f0-451b-9493-41091bf7f20a)
+
 
 **Question 10**
----
--- Paste Question 10 here
 
-```sql
--- Paste your SQL code below for Question 10
-```
 
 **Output:**
 
-![Output10](output.png)
+
 
 
 ## RESULT
