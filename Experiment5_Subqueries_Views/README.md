@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/e2254264-8f44-4f15-bc75-2567ac03d139)# Experiment 5: Subqueries and Views
+# Experiment 5: Subqueries and Views
 
 ## AIM
 To study and implement subqueries and views.
@@ -134,6 +134,7 @@ where customer_id=(
 ```
 
 **Output:**
+
 ![image](https://github.com/user-attachments/assets/91e1c38d-8ebc-4e59-8c1b-848a86321bf7)
 
 
