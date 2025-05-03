@@ -38,19 +38,22 @@ HAVING condition;
 
 **Question 1**
 --
--- Paste Question 1 here
+![image](https://github.com/user-attachments/assets/408857b5-4b76-46cf-9325-6361d8452d39)
 
-```sql
--- Paste your SQL code below for Question 1
 ```
+select date(AppointmentDateTime) as "AppointmentDate",count(AppointmentID) as TotalAppointments
+from Appointments
+group by AppointmentDateTime;
+```
+
 
 **Output:**
 
-![Output1](output.png)
+![image](https://github.com/user-attachments/assets/fd081a84-5ab3-421c-9ab7-1a1aa98be381)
+
 
 **Question 2**
 ---
--- Paste Question 2 here
 
 ```sql
 -- Paste your SQL code below for Question 2
