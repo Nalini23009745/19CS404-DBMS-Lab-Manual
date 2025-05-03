@@ -104,6 +104,9 @@ CREATE TABLE Table_Name (
 ```
 
 **Question 1**
+
+
+
 ![image](https://github.com/user-attachments/assets/3fe83a1a-9889-4688-82ee-6c8f85d7944b)
 
 
@@ -120,6 +123,9 @@ Address TEXT);
 
 
 **Question 2**
+
+
+
 ![image](https://github.com/user-attachments/assets/72849a5e-029c-4112-8f8d-40ace39a1aea)
 
 
@@ -136,29 +142,35 @@ alter table Student_details add column  Adhar_Number number;
 
 **Question 3**
 ---
--- Paste Question 3 here
+![image](https://github.com/user-attachments/assets/d949e054-fa08-423e-87d4-d91e6ca529f6)
 
-```sql
--- Paste your SQL code below for Question 3
 ```
-
+DELETE FROM Doctors
+WHERE specialization='Pediatrics'
+and  first_name='Michael';
+```
 **Output:**
+![image](https://github.com/user-attachments/assets/17bd17b1-a21f-4601-8e62-37817c6a9ad7)
 
-![Output3](output.png)
 
 **Question 4**
----
--- Paste Question 4 here
 
-```sql
--- Paste your SQL code below for Question 4
+
+![image](https://github.com/user-attachments/assets/ff18f53f-98d7-43e0-a9aa-7ff9aa459246)
+
+```
+select date(AppointmentDateTime) as "AppointmentDate",count(AppointmentID) as TotalAppointments
+from Appointments
+group by AppointmentDateTime;
 ```
 
 **Output:**
+![image](https://github.com/user-attachments/assets/5edfdff8-341e-46f6-80ae-10f3beb2b22f)
 
-![Output4](output.png)
 
 **Question 5**
+
+
 !![image](https://github.com/user-attachments/assets/88581c55-7b8c-4c2d-b19c-7a949373be8d)
 
 
@@ -177,17 +189,28 @@ foreign key(CustomerID)references Customers(CustomerID)
 
 **Question 6**
 ---
--- Paste Question 6 here
 
-```sql
--- Paste your SQL code below for Question 6
+
+![image](https://github.com/user-attachments/assets/ee78fd02-88fe-4979-a70f-833035a969b3)
+
 ```
-
+create table Products(
+ProductID INTEGER primary key,
+ProductName TEXT unique not NULL,
+Price REAL,
+StockQuantity INTEGER,
+check(Price>0),
+check(StockQuantity>=0)
+);
+```
 **Output:**
 
-![Output6](output.png)
+![image](https://github.com/user-attachments/assets/ca25f3fc-5b2d-46f3-ad24-a4e5c3f271b9)
+
 
 **Question 7**
+
+
 ![image](https://github.com/user-attachments/assets/11e1c767-4946-483d-a456-67eaae169bcb)
 
 ```
@@ -208,20 +231,32 @@ check(StockQuantity>=0)
 
 **Question 8**
 ---
--- Paste Question 8 here
 
-```sql
--- Paste your SQL code below for Question 8
+
+![image](https://github.com/user-attachments/assets/c264880a-7def-4ed9-89f1-9c5a2f709ece)
+
+```
+CREATE TABLE contacts(
+contact_id INTEGER  primary key,
+first_name TEXT not NULL,
+last_name TEXT not NULL,
+email TEXT,
+phone TEXT not NULL,
+CHECK (length(phone)>=10)
+);
 ```
 
 **Output:**
 
-![Output8](output.png)
+![image](https://github.com/user-attachments/assets/7d6bbaa4-0052-4e59-b998-03698b7bd780)
+
 
 **Question 9**
+
+
 ![image](https://github.com/user-attachments/assets/7d6938b8-d8ad-431d-950f-09f30a41d700)
 
-]```
+```
 create table Shipments(
 ShipmentID INTEGER  primary key,
 ShipmentDate  DATE,
@@ -239,8 +274,21 @@ foreign key(OrderID) References Orders(OrderID));
 **Question 10**
 
 
+![image](https://github.com/user-attachments/assets/4d391e39-c9d6-4114-a310-1b234199a499)
+
+```
+create table products(
+product_id INTEGER primary key,
+product_name TEXT not NULL,
+list_price DECIMAL (10, 2) not NULL check(list_price>=0),
+discount DECIMAL (10, 2) default 0 not NULL check(discount>=0) ,
+check(list_price>=discount)
+);
+```
+
 **Output:**
 
+![image](https://github.com/user-attachments/assets/2fe7d3c1-3a5b-4a8e-9665-343f611b5d06)
 
 
 
