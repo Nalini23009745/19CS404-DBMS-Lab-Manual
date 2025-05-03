@@ -150,6 +150,7 @@ WHERE specialization='Pediatrics'
 and  first_name='Michael';
 ```
 **Output:**
+
 ![image](https://github.com/user-attachments/assets/17bd17b1-a21f-4601-8e62-37817c6a9ad7)
 
 
@@ -165,6 +166,8 @@ group by AppointmentDateTime;
 ```
 
 **Output:**
+
+
 ![image](https://github.com/user-attachments/assets/5edfdff8-341e-46f6-80ae-10f3beb2b22f)
 
 
