@@ -191,6 +191,7 @@ WHERE AGENT_CODE IN ('A003','A008');
 ```
 
 **Output:**
+
 ![image](https://github.com/user-attachments/assets/30ced4b5-4d78-45ca-840e-1c7e85d18b98)
 
 ![Output10](output.png)
