@@ -214,10 +214,15 @@ Billing
 ## Design Choices:
 
 Use of separate entities for Enrollment, Schedule, and Billing: helps normalize many-to-many relationships and maintain relational integrity between students, courses, and financial records.
+
 Department as a central entity: provides a logical way to group students, instructors, and courses, ensuring consistent assignment and easy management.
+
 Classroom and Schedule entities include scheduling details:effectively separating course content from its time, location, and instructor, allowing for flexible timetable management.
+
 Self-relationship on Course for Prerequisites:enables tracking of course dependencies without redundancy, supporting academic planning.
+
 Instructor–Department and Instructor–Course relationships:are modular, allowing one instructor to teach multiple courses and serve as head of a department, if needed.
+
 The design is modular and extensible:supporting future additions like prerequisites, billing, attendance tracking, or grading systems without major changes to the existing schema.
 
 ## RESULT
